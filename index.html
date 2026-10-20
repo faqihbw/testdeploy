@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Faqih — Portfolio</title>
+  <meta name="description" content="Portfolio of Faqih — growth, data and channel operations." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <script>
+    // Apply saved theme before paint to avoid a flash
+    try {
+      const t = localStorage.getItem("theme");
+      if (t) document.documentElement.dataset.theme = t;
+    } catch (e) {}
+  </script>
+</head>
+<body>
+  <header class="nav" id="top">
+    <div class="container nav__inner">
+      <a href="#top" class="nav__logo">faqih<span>.</span></a>
+      <nav class="nav__links" id="navLinks">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="nav__actions">
+        <button class="icon-btn" id="themeToggle" aria-label="Toggle theme">
+          <span class="icon-sun">☀</span><span class="icon-moon">☾</span>
+        </button>
+        <button class="icon-btn nav__burger" id="burger" aria-label="Open menu" aria-expanded="false">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container hero__inner">
+        <p class="eyebrow">Hi, I'm Faqih 👋</p>
+        <h1 class="hero__title">
+          I turn messy data into <span class="accent" id="typed">growth decisions</span>.
+        </h1>
+        <p class="hero__sub">
+          Growth &amp; channel operations at BukuWarung. I build dashboards, write SQL,
+          run marketplace ads, and ship scrappy tools that save teams hours every week.
+        </p>
+        <div class="hero__cta">
+          <a href="#projects" class="btn btn--primary">See my work</a>
+          <a href="#contact" class="btn btn--ghost">Get in touch</a>
+        </div>
+        <ul class="stats">
+          <li><strong data-count="5">0</strong><span>+ years experience</span></li>
+          <li><strong data-count="30">0</strong><span>+ dashboards shipped</span></li>
+          <li><strong data-count="100">0</strong><span>+ hours automated / mo</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section">
+      <div class="container about">
+        <div class="about__avatar reveal" aria-hidden="true">F</div>
+        <div class="reveal">
+          <h2 class="section__title">About me</h2>
+          <p>
+            I sit where business questions meet data. My day-to-day is figuring out
+            <em>why</em> a number moved, then building the thing that stops anyone from
+            having to ask again — a dashboard, a query, or a small automation.
+          </p>
+          <p>
+            I care about clear metrics, fast feedback loops, and tools people actually use.
+            Outside work I like tinkering with AI workflows and learning by building.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="section section--alt">
+      <div class="container">
+        <h2 class="section__title reveal">Skills &amp; tools</h2>
+        <div class="skills">
+          <div class="card reveal">
+            <h3>📊 Data</h3>
+            <ul class="tags">
+              <li>SQL / BigQuery</li><li>Funnel analysis</li><li>Cohorts</li><li>Looker Studio</li><li>Python</li>
+            </ul>
+          </div>
+          <div class="card reveal">
+            <h3>📈 Growth</h3>
+            <ul class="tags">
+              <li>Marketplace ads</li><li>CAC / ROAS</li><li>Affiliate programs</li><li>Experimentation</li><li>Budget planning</li>
+            </ul>
+          </div>
+          <div class="card reveal">
+            <h3>🛠 Build</h3>
+            <ul class="tags">
+              <li>HTML / CSS / JS</li><li>Apps Script</li><li>Chart.js</li><li>AI automation</li><li>Google Workspace</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="section">
+      <div class="container">
+        <h2 class="section__title reveal">Selected projects</h2>
+        <div class="filters reveal" role="tablist">
+          <button class="filter is-active" data-filter="all">All</button>
+          <button class="filter" data-filter="data">Data</button>
+          <button class="filter" data-filter="growth">Growth</button>
+          <button class="filter" data-filter="tools">Tools</button>
+        </div>
+        <div class="projects">
+          <article class="project card reveal" data-cat="data">
+            <div class="project__thumb" style="--h: 230">📊</div>
+            <div class="project__body">
+              <h3>Campaign Performance Dashboard</h3>
+              <p>Single source of truth for merchant activation campaigns. Cut weekly reporting from half a day to minutes.</p>
+              <ul class="tags tags--sm"><li>BigQuery</li><li>Apps Script</li><li>Chart.js</li></ul>
+            </div>
+          </article>
+          <article class="project card reveal" data-cat="growth">
+            <div class="project__thumb" style="--h: 20">🛒</div>
+            <div class="project__body">
+              <h3>Shopee Ads Optimization</h3>
+              <p>Rebuilt CPC campaign structure around CAC targets. Shifted budget to winning keywords and lifted ROAS.</p>
+              <ul class="tags tags--sm"><li>Shopee Ads</li><li>CAC / ROAS</li><li>Budgeting</li></ul>
+            </div>
+          </article>
+          <article class="project card reveal" data-cat="tools">
+            <div class="project__thumb" style="--h: 150">🤖</div>
+            <div class="project__body">
+              <h3>Report Export Automation</h3>
+              <p>Browser automations that pull daily marketplace reports and merge them into one clean table.</p>
+              <ul class="tags tags--sm"><li>Automation</li><li>AI agents</li><li>CSV</li></ul>
+            </div>
+          </article>
+          <article class="project card reveal" data-cat="data">
+            <div class="project__thumb" style="--h: 270">🧾</div>
+            <div class="project__body">
+              <h3>EDC Transaction Analytics</h3>
+              <p>Reusable SQL library for payment-device funnels, channel splits and merchant cohorts.</p>
+              <ul class="tags tags--sm"><li>SQL</li><li>Funnels</li><li>Cohorts</li></ul>
+            </div>
+          </article>
+          <article class="project card reveal" data-cat="growth">
+            <div class="project__thumb" style="--h: 330">🤝</div>
+            <div class="project__body">
+              <h3>Affiliate Program Ramp-up</h3>
+              <p>Built the outreach pipeline and tracking for marketplace affiliates, from list to tagged contacts.</p>
+              <ul class="tags tags--sm"><li>Affiliates</li><li>Ops</li><li>Sheets</li></ul>
+            </div>
+          </article>
+          <article class="project card reveal" data-cat="tools">
+            <div class="project__thumb" style="--h: 190">🌐</div>
+            <div class="project__body">
+              <h3>This Portfolio</h3>
+              <p>Hand-written in vanilla HTML, CSS and JS. No frameworks, no build step, dark mode included.</p>
+              <ul class="tags tags--sm"><li>HTML</li><li>CSS</li><li>JS</li></ul>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section id="experience" class="section section--alt">
+      <div class="container">
+        <h2 class="section__title reveal">Experience</h2>
+        <ol class="timeline">
+          <li class="reveal">
+            <span class="timeline__date">2023 — Now</span>
+            <h3>Growth &amp; Channel Ops · BukuWarung</h3>
+            <p>Own Shopee channel performance for BukuAgen EDC: ads, affiliates, reporting and planning.</p>
+          </li>
+          <li class="reveal">
+            <span class="timeline__date">2021 — 2023</span>
+            <h3>Data / Business Analyst · Company Name</h3>
+            <p>Built KPI dashboards and ran deep-dives that informed product and ops decisions.</p>
+          </li>
+          <li class="reveal">
+            <span class="timeline__date">2017 — 2021</span>
+            <h3>B.Sc. · University Name</h3>
+            <p>Studied something analytical. Edit this line with your real education.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section">
+      <div class="container contact reveal">
+        <h2 class="section__title">Let's work together</h2>
+        <p class="contact__sub">Got a data question or a growth problem? Drop me a message.</p>
+        <form class="contact__form" id="contactForm">
+          <div class="field">
+            <label for="name">Name</label>
+            <input id="name" name="name" required placeholder="Your name" />
+          </div>
+          <div class="field">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="4" required placeholder="What's on your mind?"></textarea>
+          </div>
+          <button type="submit" class="btn btn--primary">Send via email</button>
+        </form>
+        <div class="socials">
+          <a href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="https://github.com/" target="_blank" rel="noopener">GitHub</a>
+          <a href="mailto:faqih@bukuwarung.com">Email</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>© <span id="year"></span> Faqih. Built with vanilla HTML, CSS &amp; JS.</p>
+      <a href="#top" class="footer__top">Back to top ↑</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
