@@ -132,19 +132,6 @@ a { color: inherit; }
   border-radius: var(--radius); padding: 24px; box-shadow: var(--shadow);
 }
 
-/* About */
-.about { display: grid; grid-template-columns: 200px 1fr; gap: 48px; align-items: center; }
-.about__avatar {
-  aspect-ratio: 1; border-radius: 28px; display: grid; place-items: center;
-  font-size: 5rem; font-weight: 800; color: #fff;
-  background: linear-gradient(135deg, var(--accent), #ec4899);
-}
-.about p { color: var(--muted); font-size: 1.08rem; max-width: 60ch; }
-@media (max-width: 640px) {
-  .about { grid-template-columns: 1fr; gap: 24px; }
-  .about__avatar { width: 120px; font-size: 3rem; }
-}
-
 /* Skills */
 .skills { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; }
 .tags { list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: 8px; }
